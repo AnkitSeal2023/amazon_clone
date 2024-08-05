@@ -9,7 +9,7 @@ connectDB();  // Connect to MongoDB
 
 const app = express();
 
-app.use("/api",express.json());
+app.use(express.json());
 app.get('/api', (req, res) => {
   console.log("api hit");
   res.send('Hello API');
