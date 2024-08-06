@@ -5,14 +5,31 @@ export default function Signup() {
     const [userPass, setUserPass] = React.useState("");
     
     let userData = { userMail : userEmail, userPassword:userPass };
+    async function handleUserData(){
+        try{
+            const checkEmailResponse = await fetch(`https://emailvalidation.abstractapi.com/v1/?api_key=86e8051f68594e57b751f7888bbd4b86&email=${userEmail}`);
+            const emailResult = await checkEmailResponse.JSON;
+            console.log(emailResult);
+            if(emailResult.deliverability==="DELIVERABLE"){
+                uploadUserData();
+            }
+            else
+                alert("Email adress is invalid");
+        }
+        catch(error)
+        {
+            console.log("handle user data error: " , error);
+            alert("Connecton failed");
+        }
+    }
     async function uploadUserData() {
         try {
-            const response = await fetch("/api/signup", {
+            const signupResponse = await fetch("/api/signup", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(userData)
             });
-            const result = await response.json();
+            const result = await signupResponse.json();
             if (result.ok) {
                 alert("Account creation Successful");
             }
@@ -43,7 +60,7 @@ export default function Signup() {
                     <label htmlFor="email" className="signin-input-label">Enter your password:</label>
                     <input type="text" id="email" className="signin-input" placeholder="123456" onChange={(e) => setUserPass(e.target.value)} />
                 </div>
-                <button className="signin-continue" onClick={() => uploadUserData()}><div>Continue</div></button>
+                <button className="signin-continue" onClick={() => handleUserData()}><div>Continue</div></button>
                 <div className="signin-amazon-tnc">By continuing, you agree to Amazon's <a href="/">Conditions of Use</a> and <a href="/">Privacy Notice</a>.</div>
             </div>
         </div>
