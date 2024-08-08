@@ -7,7 +7,7 @@ export default function Signup() {
     let userData = { userMail : userEmail, userPassword:userPass };
     async function handleUserData(){
         try{
-            const checkEmailResponse = await fetch(`https://emailvalidation.abstractapi.com/v1/?api_key=86e8051f68594e57b751f7888bbd4b86&email=${userEmail}`);
+            const checkEmailResponse = await fetch(`https://emailvalidation.abstractapi.com/v1/?api_key=API_KEY&email=${userEmail}`);
             const emailResult = await checkEmailResponse.JSON;
             console.log(emailResult);
             if(emailResult.deliverability==="DELIVERABLE"){
