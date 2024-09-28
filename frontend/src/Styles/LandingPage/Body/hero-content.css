@@ -1,0 +1,241 @@
+#hero-container {
+    padding: 1.5em;
+    margin-top: -370px;
+    display: flex;
+    flex-direction: column;
+    width: 1500px;
+    height: 100%;
+    align-items: center;
+}
+
+#hero-section1 {
+    z-index: 1;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    background: transparent;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#hero-section1>li {
+    padding: 1em;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 24%;
+    height: 430px;
+    background-color: rgb(255, 255, 255);
+}
+
+#hero-cards1 {
+    display: flex;
+    flex-direction: column;
+}
+
+#hero-cards1-heading,
+#hero-cards2-heading,
+#hero-cards3-heading {
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+#hero-cards1-img {
+    padding-top: 5%;
+    padding-bottom: 7%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#hero-cards1-img img {
+    overflow: hidden;
+    width: 100%;
+}
+
+#hero-cards1-link {
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: 400;
+    color: rgb(9, 93, 141);
+}
+
+#hero-cards2-container,
+#hero-cards3-container {
+    width: 100%;
+    height: 100%;
+}
+
+#hero-cards2-main-content,
+#hero-cards3-main-content {
+    text-decoration: none;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 95%;
+    flex-wrap: wrap;
+}
+
+#hero-cards2-main-content>li,
+#hero-cards3-main-content>li {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin: 0.45em;
+    width: 143px;
+    height: 160px;
+}
+
+.hero-cards2-img-container {
+    height: 90%;
+    width: 100%;
+}
+
+.hero-cards3-img-container {
+    height: 70%;
+    width: 100%;
+
+}
+
+.hero-cards2-img-container>img {
+    background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.hero-cards3-img-container>img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#hero-cards2-text1,
+#hero-cards2-text2,
+#hero-cards2-text3,
+#hero-cards2-text4,
+#hero-cards3-text1,
+#hero-cards3-text2,
+#hero-cards3-text3,
+#hero-cards3-text4 {
+    font-size: 0.7em;
+    font-weight: 400;
+    color: rgb(9, 93, 141);
+}
+
+#hero-section2 {
+    padding: 16px;
+    font-weight: 600;
+    font-size: 1.5em;
+    margin-top: 30px;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 300px;
+}
+
+#hero-section2>ul,
+#hero-section3>ul {
+    overflow-y: hidden;
+    overflow-x: scroll;
+    margin-top: 10px;
+    background-color: rgb(255, 255, 255);
+    text-decoration: none;
+    list-style-type: none;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 85%;
+}
+
+
+.hero-section-left-button {
+    z-index: 2;
+    top: 10vh;
+    position: relative;
+    left: 0;
+    background-color: transparent;
+    border: none;
+    font-size: 0.8em;
+    cursor: pointer;
+}
+
+.hero-section-right-button {
+    z-index: 2;
+    position: absolute;
+    top: 10vh;
+    background-color: transparent;
+    border: none;
+    font-size: 0.8em;
+    cursor: pointer;
+}
+
+#hero-section2-carousel>li,
+#hero-section3-carousel>li {
+    display: flex;
+    flex-direction: row;
+}
+
+.hero-section2-carousel-elements,
+.hero-section3-carousel-elements {
+    margin: 0px 25px;
+    width: 227px;
+    height: 100%;
+}
+
+.hero-section2-carousel-elements>img,
+.hero-section3-carousel-elements>img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+#hero-section3 {
+    position: relative;
+    overflow: hidden;
+    padding: 16px;
+    font-weight: 600;
+    font-size: 1.5em;
+    margin-top: 30px;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 300px;
+}
+
+#hero-section3-carousel {
+    scroll-behavior: smooth;
+}
+
+#hero-section4 {
+    margin-top: 30px;
+    z-index: 1;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    background: transparent;
+    justify-content: space-between;
+    width: 100%;
+}
+#hero-section4>li {
+    padding: 1em;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 24%;
+    height: 430px;
+    background-color: rgb(255, 255, 255);
+}
+
+.test{
+    align-self: center;
+    width: 90%;
+    background-color: grey;
+    border-radius: 15px;
+    height: 20vh;
+}
+.add-cart{
+    background-color: mediumaquamarine;
+    cursor: pointer;
+}

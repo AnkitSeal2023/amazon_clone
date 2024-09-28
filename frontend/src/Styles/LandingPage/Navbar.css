@@ -1,0 +1,291 @@
+* {
+    font-family: "Amazon Ember", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+}
+
+#navbar1 {
+    position: fixed;
+    z-index: 1;
+    justify-content: space-between;
+    color: white;
+    background-color: rgb(19, 25, 33);
+    height: 60px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#amazon-logo {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    margin-left: 0.1em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    border: 0.15em solid transparent;
+}
+
+#amazon-logo:hover {
+    border-radius: 0.5em;
+    border-color: white;
+}
+
+
+#amazon-ico {
+    background-image: url('/images/sprite-logos.png');
+    display: inline-block;
+    height: 50px;
+    width: 118px;
+    background-position: -5px -37px;
+}
+
+#logo-in {
+    font-size: larger;
+    color: white;
+    margin-left: -16px;
+    margin-top: 12px;
+}
+
+.nav1-location {
+    max-width: 201px;
+    display: flex;
+    flex-direction: column;
+    border: 0.15em solid transparent;
+    padding: 0.5em 0em;
+}
+
+.nav1-location:hover {
+    border-radius: 0.5em;
+    border-color: white;
+}
+
+.nav1-location-line1 {
+    display: flex;
+    flex-direction: row;
+}
+
+#nav1-location-ico {
+    background-image: url("/images/sprite-logos.png");
+    margin-top: 10px;
+    background-position: -70px 75px;
+    width: 16px;
+    height: 22px;
+    margin-right: 2px;
+}
+
+#nav1-location-delivery {
+    font-weight: 600;
+    color: rgb(196, 193, 193);
+}
+
+#nav1-location-update {
+    margin-left: 17px;
+    margin-top: -18px;
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.nav1-search-bar {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    border-radius: 0.5em;
+    width: 62vw;
+    height: 85%;
+}
+
+#nav1-search-bar-dropdown {
+    border: none;
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(212, 212, 212);
+    border-radius: 0.5em;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    height: inherit;
+}
+
+#nav1-search-bar-input {
+    border: 0;
+    display: inline;
+    width: 100%;
+    height: inherit;
+}
+
+#nav1-search-bar-input:placeholder-shown {
+    padding-left: 0.5vw;
+}
+
+#nav1-search-button {
+    display: relative;
+    box-sizing: border-box;
+    border: 0;
+    height: inherit;
+    width: 3.5em;
+    background-color: #f8ba68;
+    border-top-right-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+    background-image: url("/images/sprite-logos.png");
+    background-position: 0px 170px;
+    height: inherit;
+}
+
+#nav1-search-button:hover {
+    background-color: #f3a847;
+}
+
+#nav1-country-code {
+    margin: 0em;
+}
+
+#nav1-accounts-lists {
+    width: 130px;
+    height: 55px;
+    justify-content: center;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    border: 0.15em solid transparent;
+}
+
+#nav1-accounts-lists:hover {
+    border-radius: 0.5em;
+    border-color: white;
+}
+
+#nav1-returns-orders {
+    height: 55px;
+    align-content: center;
+    text-decoration: none;
+    color: white;
+    border: 0.15em solid transparent;
+}
+
+#nav1-returns-orders:hover {
+    border-radius: 0.5em;
+    border-color: white;
+}
+
+
+#nav1-cart {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 0.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    width: 80px;
+    height: 50px;
+    border: 0.15em solid transparent;
+}
+
+#nav1-cart:hover {
+    border-radius: 0.5em;
+    border-color: white;
+}
+
+
+#nav1-cart-ico {
+    background-image: url("/images/sprite-logos.png");
+    background-position: 0px 70px;
+    width: 70px;
+    height: inherit;
+    margin-right: -10px;
+}
+
+#nav1-cart-text {
+    align-self: last baseline;
+    margin-bottom: 5px;
+}
+
+#nav1-cart-no {
+    color: #f3a847;
+    position: absolute;
+    z-index: 1;
+    margin-left: 19px;
+    margin-bottom: 12px;
+}
+
+#navbar2 {
+    text-wrap: nowrap;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(35, 47, 62);
+    color: white;
+    width: 100%;
+    margin-top: 60px;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    align-items: center;
+    height: 40px;
+}
+
+#nav2-left {
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    justify-content: space-between;
+    color: white;
+    list-style: none;
+}
+
+.nav2-left {
+    cursor: pointer;
+    border: 2px solid transparent;
+    padding: 7px;
+}
+.nav2-left:hover {
+    border-radius: 8px;
+    border-color: white;
+}
+
+#nav2-left-item0 {
+    display: flex;
+    flex-direction: row;
+}
+
+#nav2-left-item0-hamburger {
+    position: relative;
+    z-index: 0;
+    background-image: url("/images/sprite-logos.png");
+    background-position: -171px -254px;
+    margin-top: 0.1em;
+    padding-right: 23px;
+    width: 20px;
+    height: 16px;
+}
+
+#nav2-right {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+}
+
+#nav2-right-prime-ico {
+    display: flex;
+    flex-direction: row;
+    background-image: url("/images/prime-logo.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 5px;
+    width: 30px;
+    height: 30px;
+}
+
+#nav2-right-text {
+    align-items: center;
+    align-content: center;
+    right: 0;
+}

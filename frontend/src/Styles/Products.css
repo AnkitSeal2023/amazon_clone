@@ -1,0 +1,45 @@
+* {
+    font-family: "Amazon Ember", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav{
+    background-color: rgb(19, 25, 33);
+    color: aliceblue;
+}
+.main-content{
+    margin-top:6vw;
+    margin-left: 1vw;
+}
+.product-img{
+    border-radius: 7px;
+}
+.product-img-container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    height: 50vh;
+    width: 20vw;
+    background-color: rgb(223, 223, 223);
+}
+#nav1-cart-text:visited{
+    color: aliceblue;
+}
+#nav1-cart-text{
+    color: aliceblue;
+}
+.test{
+    margin-top:2vh ;
+    align-self: center;
+    width: 90%;
+    background-color: grey;
+    border-radius: 15px;
+    height: 20vh;
+}
+
+.add-cart{
+    background-color: cyan;
+}
