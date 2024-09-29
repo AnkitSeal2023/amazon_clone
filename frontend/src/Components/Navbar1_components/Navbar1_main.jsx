@@ -1,4 +1,5 @@
 import React from "react";
+import "../../Styles/LandingPage/Navbar.css"
 import Nav1_location from "./Nav1_location.jsx"
 import Nav1_SearchBar from "./Nav1_SearchBar.jsx"
 import Nav1_AccountDetails from "./Nav1_AccountDetails.jsx"

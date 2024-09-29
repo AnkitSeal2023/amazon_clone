@@ -6,6 +6,18 @@ export default function Hero() {
         const urlParams = new URLSearchParams(window.location.search);
         return urlParams.get(name);
     }
+    function getUserDetails() // to get "USER_DETAIL cookie"
+    {
+        const cookie = document.cookie;
+        const cookieArray = cookie.split(';');
+        for (let i = 0; i < cookieArray.length; i++) {
+            if (cookieArray[i].includes("USER_DETAIL")) {
+                return cookieArray[i].split('=')[1];
+            }
+        }
+        return null;
+    }
+    const userJWT = getUserDetails(); 
     const userName = getUrlParameter('username');
     function scrollLeft() {
         document.getElementById("hero-section3-carousel").scrollLeft -= 500;
@@ -21,7 +33,7 @@ export default function Hero() {
             await fetch(`/updatecart/`, {
             method:"PATCH",
             headers:{"Content-type":"application/json"},
-            body:JSON.stringify({productID:`${productID}`, userName:`${userName}`})
+            body:JSON.stringify({productID:`${productID}`, userJWT:`${userJWT}`})
            });
         }
         catch(error){
@@ -350,7 +362,7 @@ export default function Hero() {
                 <div> test component </div>
                 <div>Product id : 1002</div>
                 <div>Product name : Wireless Mouse</div>
-                <button className="add-cart" onClick={()=>addToCart(1003)}> Add to cart </button>
+                <button className="add-cart" onClick={()=>addToCart(2005)}> Add to cart </button>
             </div>
         </>
     );
