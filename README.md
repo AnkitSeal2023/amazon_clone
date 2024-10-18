@@ -67,7 +67,7 @@ This project is an **e-commerce website** similar to Amazon, built to display pr
    npm start
    ```
 
-4. Navigate to `http://localhost:5000` in your browser.
+4. Navigate to `http://localhost:5173` in your browser.
 
 ## Usage
 
