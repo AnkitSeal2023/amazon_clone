@@ -1,9 +1,14 @@
 #hero-container {
+    /* position: absolute; */
+    /* top: 23vw; */
+    z-index: 2;
     padding: 1.5em;
     margin-top: -370px;
+    
     display: flex;
     flex-direction: column;
-    width: 1500px;
+    width: 99vw;
+    max-width: 1500px;
     height: 100%;
     align-items: center;
 }
@@ -37,7 +42,7 @@
 #hero-cards2-heading,
 #hero-cards3-heading {
     font-weight: 600;
-    font-size: 1.5em;
+    font-size: 1em;
 }
 
 #hero-cards1-img {
@@ -48,9 +53,8 @@
     width: 100%;
 }
 
-#hero-cards1-img img {
+#hero-cards1-img > img {
     overflow: hidden;
-    width: 100%;
 }
 
 #hero-cards1-link {
@@ -71,10 +75,11 @@
     text-decoration: none;
     list-style-type: none;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    /* flex-direction: row; */
     width: 100%;
     height: 95%;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
 
 #hero-cards2-main-content>li,
@@ -86,23 +91,54 @@
     width: 143px;
     height: 160px;
 }
-
+.hero-cards-line{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
 .hero-cards2-img-container {
+    display: flex;
+    flex-direction: row;
     height: 90%;
     width: 100%;
 }
-
-.hero-cards3-img-container {
+.hero-cards4-container{
+    display: flex;
+    flex-direction: column;
+}
+#hero-cards4-main-content{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    list-style-type: none;
+    width: 100%;
+    height: 95%;
+}
+.hero-cards4-img-container {
     height: 70%;
     width: 100%;
-
 }
 
 .hero-cards2-img-container>img {
     background-color: #ffffff;
-    width: 100%;
+    width: 70%;
+    min-width: 50px;
     height: 100%;
     object-fit: contain;
+}
+.hero-cards3-img-container {
+    height: 70%;
+    width: 100%;
+}
+.hero-cards3-line2-imgs{
+    margin-top: 2vh;
+}
+.hero-cards3-imgs{
+    margin-bottom: 1.5vh;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
 }
 
 .hero-cards3-img-container>img {
@@ -128,16 +164,23 @@
     padding: 16px;
     font-weight: 600;
     font-size: 1.5em;
+    font-size: 1.2rem;
     margin-top: 30px;
     background-color: rgb(255, 255, 255);
     width: 100%;
-    height: 300px;
+    height: 50vw;
+    max-height: 218px ;
+    overflow: hidden;
+    /* align-content: center; */
 }
 
 #hero-section2>ul,
 #hero-section3>ul {
+    padding-left: 1vw;
+    justify-content: center;
     overflow-y: hidden;
     overflow-x: scroll;
+    scroll-behavior: smooth;
     margin-top: 10px;
     background-color: rgb(255, 255, 255);
     text-decoration: none;
@@ -146,10 +189,28 @@
     z-index: 1;
     display: flex;
     flex-direction: row;
-    width: 100%;
-    height: 85%;
+    /* width: 700%; */
+    max-width: 1350px;
+    height: 50%;
+    max-height: 200px;
 }
-
+#hero-section2,#hero-section3 {
+    position: relative;
+    overflow: hidden;
+    padding: 16px;
+    padding-top: 50px;
+    margin-top: 5vw;
+    /* margin-top: ; */
+    font-weight: 600;
+    font-size: 1.5em;
+    background-color: transparent;
+    width: 100%;
+    min-height: 250px;
+}
+#hero-section3 {
+    margin-top: 0px;
+    min-height: 150px;
+}
 
 .hero-section-left-button {
     z-index: 2;
@@ -175,37 +236,18 @@
 #hero-section2-carousel>li,
 #hero-section3-carousel>li {
     display: flex;
+    margin-left: 15px;
     flex-direction: row;
+    object-fit: contain;
 }
 
-.hero-section2-carousel-elements,
-.hero-section3-carousel-elements {
-    margin: 0px 25px;
-    width: 227px;
-    height: 100%;
-}
 
 .hero-section2-carousel-elements>img,
 .hero-section3-carousel-elements>img {
     object-fit: contain;
-    width: 100%;
+    width: 20vw;
+    max-width:180px;
     height: 100%;
-}
-
-#hero-section3 {
-    position: relative;
-    overflow: hidden;
-    padding: 16px;
-    font-weight: 600;
-    font-size: 1.5em;
-    margin-top: 30px;
-    background-color: rgb(255, 255, 255);
-    width: 100%;
-    height: 300px;
-}
-
-#hero-section3-carousel {
-    scroll-behavior: smooth;
 }
 
 #hero-section4 {
@@ -238,4 +280,93 @@
 .add-cart{
     background-color: mediumaquamarine;
     cursor: pointer;
+}
+
+@media (max-width: 1440px) {
+    #hero-container {
+        margin-top: -356px;
+    }
+    
+    
+}
+@media (max-width: 1392px) {
+    #hero-section2>ul li:nth-child(1),
+    #hero-section3>ul li:nth-child(1) {
+        padding-left: 5vw;
+    }
+}
+@media (max-width: 1024px) {
+    #hero-section1>li {
+        width: 30%;
+        height: 35vh;
+    }
+    #hero-container {
+        margin-top: -250px;
+    }
+    #hero-cards4-container{
+        display: none !important;
+    }
+    #hero-cards4-container * {
+        display: none !important;
+    }
+    .hero-element4{
+        display: none !important;
+    }
+    .hero-element4 *  {
+        display: none !important;
+    }
+    #hero-section2>ul li:nth-child(1),
+    #hero-section3>ul li:nth-child(1) {
+        padding-left: 80vw;
+    }
+}
+@media (max-width: 768px) {
+    #hero-container {
+        margin-top: -200px;
+    }
+    #hero-section2>ul li:nth-child(1),
+    #hero-section3>ul li:nth-child(1) {
+        padding-left: 110vw;
+    }
+}
+@media (max-width: 425px) {
+    #hero-section1>li {
+        width: 48%;
+        height: 35vh;
+    }
+    #hero-container {
+        margin-top: -144px;
+        padding:0px;
+    }
+    #hero-section1>li {
+        height: 30vh;
+    }
+    #hero-cards1{
+        display: none !important;
+    }
+    #hero-section2>ul li:nth-child(1),
+    #hero-section3>ul li:nth-child(1) {
+        padding-left: 100vw;
+        padding-left: 120vw;
+    }
+}
+@media (max-width: 375px) {
+    #hero-container {
+        margin-top: -144px;
+    }
+    #hero-section2>ul li:nth-child(1),
+    #hero-section3>ul li:nth-child(1) {
+        padding-left: 120vw;
+    }
+}
+
+@media (max-width: 320px) {
+    #hero-container {
+        margin-top: -145px;
+    }
+    #hero-section2>ul li:nth-child(1),
+    #hero-section3>ul li:nth-child(1) {
+        padding-left: 80vw;
+    }
+    
 }

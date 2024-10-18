@@ -9,3 +9,5 @@
 /generateImgs
 frontend/.env
 backend/.env
+
+/frontend/src/Styles/LandingPage/temp

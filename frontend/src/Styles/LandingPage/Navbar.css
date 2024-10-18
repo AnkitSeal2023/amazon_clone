@@ -19,7 +19,7 @@ nav {
     color: white;
     background-color: rgb(19, 25, 33);
     height: 60px;
-    /* min-height: 5vh; */
+    min-height: 5vh;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -76,6 +76,8 @@ nav {
 }
 
 #nav1-location-ico {
+    position: relative;
+    z-index: 5;
     background-image: url("/images/sprite-logos.png");
     margin-top: 10px;
     background-position: -70px 75px;
@@ -83,6 +85,7 @@ nav {
     height: 22px;
     margin-right: 2px;
 }
+
 
 #nav1-location-delivery {
     font-weight: 600;
@@ -96,6 +99,10 @@ nav {
     color: inherit;
 }
 
+.nav1-location-update-text {
+    font-weight: bolder;
+    font-size: 1vw;
+}
 
 .nav1-search-bar {
     align-items: center;
@@ -151,6 +158,7 @@ nav {
 }
 
 #nav1-accounts-lists {
+    font-weight: bold;
     width: 130px;
     height: 55px;
     justify-content: center;
@@ -225,7 +233,7 @@ nav {
     flex-direction: row;
     background-color: rgb(35, 47, 62);
     color: white;
-    width: 100%;
+    width: 100vw;
     margin-top: 60px;
     padding-left: 0.5em;
     padding-right: 0.5em;
@@ -233,20 +241,45 @@ nav {
     height: 40px;
 }
 
+.nav2-left-container{
+    height: 44px;
+}
+
 #nav2-left {
     display: flex;
     flex-direction: row;
-    width: 75%;
+    width: 95%;
     justify-content: space-between;
     color: white;
     list-style: none;
+    overflow-x: scroll;
 }
+
+#nav2-left::-webkit-scrollbar {
+    height: 3px;
+}
+
+#nav2-left::-webkit-scrollbar-track {
+    background:  rgb(10, 20, 32)
+}
+
+#nav2-left::-webkit-scrollbar-thumb {
+    background: #214f75;
+    border-radius: 20px;
+}
+
+#nav2-left::-webkit-scrollbar-thumb:hover {
+    background: #ff0000;
+}
+
+
 
 .nav2-left {
     cursor: pointer;
     border: 2px solid transparent;
     padding: 7px;
 }
+
 .nav2-left:hover {
     border-radius: 8px;
     border-color: white;
@@ -268,10 +301,14 @@ nav {
     height: 16px;
 }
 
-#nav2-right {
+
+.nav2-right {
     display: flex;
     flex-direction: row;
+}
+.nav2-right-container{
     margin-left: auto;
+    margin-right: 1vw;
 }
 
 #nav2-right-prime-ico {
@@ -289,4 +326,34 @@ nav {
     align-items: center;
     align-content: center;
     right: 0;
+}
+
+@media (max-width: 1440px) {
+    .nav2-left-container{
+        width: 75%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .nav1-location-update-text {
+        margin-top: 10px;
+        font-size: 13px;
+    }
+    #nav1-location-ico {
+        width: 20px;
+    }
+    .nav1-search-bar {
+        width: 50vw;
+    }
+    #nav1-accounts-lists>div {
+        font-size: 15px;
+    }
+    .nav2-left-container{
+        width: 65%;
+    }
+
+}
+
+@media (max-width: 550px) {
+    
 }

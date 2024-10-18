@@ -25,8 +25,9 @@ export default function Product(props) {
     const [data, setData] = useState(null);
     const [error, setError] = useState(null);
     async function addToCart(productID) {
+        let result;
         try {
-            await fetch(`/updatecart/`, {
+            result = await fetch(`/updatecart/`, {
                 method: "PATCH",
                 headers: { "Content-type": "application/json" },
                 // body: JSON.stringify({ productID: `${productID}`, userName: `${props.username}` })
@@ -36,6 +37,13 @@ export default function Product(props) {
         catch (error) {
             alert("Connection error in cart");
             console.log("error in addtocart:", error);
+        }
+        if (result.status === 200) {
+            console.log(result);
+            alert("Product added to cart");
+        }
+        else {
+            alert("Product not added to cart");
         }
     }
     useEffect(() => {

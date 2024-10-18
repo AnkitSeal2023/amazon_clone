@@ -1,3 +1,11 @@
+html{
+  overflow-x: hidden;
+  
+}
+body{
+  overflow-x: hidden;
+}
+
 :root {
   font-family: "Amazon Ember", Arial, sans-serif;
   margin: 0;

@@ -55,7 +55,9 @@ function generateJWT(userEmail) {
 
 function verifyJWT(token) {
   if (!token)
-    return "not found";
+  {
+    return 0;
+  }
   try {
     const verify = jwt.verify(token, JWTsecret)
     return verify;
@@ -96,14 +98,17 @@ app.patch('/updatecart', async (req, res) => {
   try {
     const { productID: productID, userJWT: userJWT } = req.body;
     const userPayload = verifyJWT(userJWT);
-    const updateOne = await Users.updateOne({ email: userPayload.userEmail }, { $push: { cart: productID } })
-    console.log("updateOne:", updateOne);
-    if (updateOne) {
-      // const updateTotalPrice = await Users.update
-      res.sendStatus(200);
+    if(userPayload)
+    {
+      const updateOne = await Users.updateOne({ email: userPayload.userEmail }, { $push: { cart: productID } })
+      console.log("updateOne:", updateOne);
+      if (updateOne.matchedCount) {
+        // const updateTotalPrice = await Users.update
+        res.sendStatus(200);
+      }
+      // else
+        res.sendStatus(401);
     }
-    else
-      res.sendStatus(401);
   }
   catch (error) {
     console.log("databse update error");
